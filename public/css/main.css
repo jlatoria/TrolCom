@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html {
+    background: rgb(241, 241, 241);
+}
+
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    width: calc(100vw - 40px);
+    
+    background:rgb(219, 219, 219);
+}
+
+.bottom h1 {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.nav {
+    width: 100%;
+    height: auto;
+    padding-bottom: 30px;
+    
+}
+
+.btn {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 80px;
+    border-radius: 12px;
+    border: solid 2px #eee;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: rgb(37, 37, 37);
+    text-align: center;
+    transition: ease all 0.3s;
+}
+
+.btn:hover {
+    color: #fff;
+    background: rgb(72, 142, 233);
+    border: solid 2px rgb(72, 142, 233);
+    cursor: pointer;
+    
+}
+
+.bactive {
+    color: #fff;
+    background: rgb(72, 142, 233);
+    border: solid 2px rgb(72, 142, 233);
+    -webkit-box-shadow: 0px 0px 0px 5px rgba(59, 133, 230, 0.315); 
+    box-shadow: 0px 0px 0px 5px rgba(59, 133, 230, 0.315);
+}
+
+.btn p {
+    font-size: 12px;
+    font-weight: bold;
+ 
+}
+
+.btn .icon {
+    font-size: 25px;
+}
+
+.card {
+   
+    width: 350px;
+    height: auto;
+    border-radius: 12px;
+    padding: 20px;
+    background: rgb(255, 255, 255);
+    
+}
+
+.card h2 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.content {
+    width: calc(100vw - 40px);
+    padding: 20px;
+}
+
+.content h1 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.page {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    overflow: hidden;
+    
+}
+
+.login {
+    min-width: 500px;
+    margin: 0 auto;
+    width: calc(30vw - 100px);
+    height: auto;
+    border-radius: 12px;
+    padding: 50px;
+    background: rgb(255, 255, 255);
+    margin-top: 20vh;
+
+}
+
+.f-light {
+    font-weight: 300;
+}
+
+.login h1 {
+    
+    font-weight: 400;
+    color: rgb(37, 37, 37);
+    margin-bottom: 50px;
+}
+
+
+.login .spacer {
+    height: 20px;
+}
+
+ input {
+    width: calc(100% - 30px);
+    height: auto;
+    padding: 15px;
+    border-radius: 15px;
+    border: solid 2px rgb(223, 223, 223);
+    outline: none;
+    margin-top: 10px;
+}
+
+.login button {
+    width: 100%;
+    padding: 15px;
+    background: rgb(59, 133, 230);
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    border: solid 2px rgb(59, 133, 230);
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+ input:focus {
+    border: solid 2px rgb(59, 133, 230);
+}
+
+#err {
+    color: rgb(230, 59, 59);
+}
+
+.err  {
+    border-color: rgb(230, 59, 59);
+    color: rgb(230, 59, 59);
+}
+
+.err:focus {
+    border-color: rgb(230, 59, 59);
+    color: rgb(230, 59, 59);
+}
+
+.login label {
+    
+    font-weight: 600;
+    color:rgb(59, 60, 65);
+    
+}
+
+.loader {
+    border: 3px solid #ffffff36; /* Light grey */
+    border-top: 3px solid #ffffff; /* Blue */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+    animation: spin 0.5s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    70% { transform: rotate(340deg);}
+    100% { transform: rotate(360deg); }
+  }
+
+  .hidden {
+      visibility: hidden;
+  }

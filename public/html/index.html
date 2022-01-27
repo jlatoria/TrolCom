@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="./css/main.css">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id='p1' class="page">
+            <div id="" class="login">
+                
+                <label for="">Device IP</label>
+                <p id="err"></p>
+                <input id="ip" type="text" placeholder="Enter LAN Adress" name="" id="">
+                <div class="spacer"></div>
+                <button id="login">Connect</button>
+            </div>
+        </div>
+        <div id="p2" class="page hidden">
+            <div class="content">
+                <div class="nav"><h1>Device Dashboard</h1></div>
+                
+                <div class="card">
+                    <h2>Actions</h2>
+                    <div id="controls" style="display: flex; justify-content: center;">
+                        <div name="btn" class="btn bactive"><i class="icon ri-shut-down-line"></i> <p>Relay</p></div>
+                        <div name="btn" class="btn"><i class="icon ri-volume-up-line"></i> <p>Speaker</p></div>
+                        <div name="btn" class="btn"><i class="icon ri-lightbulb-line"></i> <p>Light</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div style="display: flex; justify-content: space-between;"><div><h1>Connected To <span class="f-light" id="dip"></span></h1></div><div><button>Disconnect</button></div></div>
+                
+            </div>
+        </div>
+    </body>
+    <script
+			  src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			  crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="../js/test.js"></script>
+</html>
