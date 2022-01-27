@@ -52,6 +52,17 @@ html {
     
 }
 
+.btn:hover .loader-blk {
+    border: 3px solid #ffffff36; /* Light grey */
+    border-top: 3px solid #ffffff; /* Blue */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    animation: spin 0.5s linear infinite;
+}
+
 .bactive {
     color: #fff;
     background: rgb(72, 142, 233);
@@ -130,6 +141,19 @@ html {
 }
 
 
+.dis {
+    color: rgb(214, 214, 214);
+    border: solid 2px #eee;
+    background: transparent;
+}
+
+.dis:hover {
+    color: rgb(214, 214, 214);
+    border: solid 2px #eee;
+    background: transparent;
+    cursor: not-allowed;
+}
+
 .login .spacer {
     height: 20px;
 }
@@ -188,7 +212,19 @@ html {
     height: 20px;
     margin: 0 auto;
     animation: spin 0.5s linear infinite;
-  }
+}
+
+.loader-blk {
+    border: 3px solid #dbdbdb; /* Light grey */
+    border-top: 3px solid #3a3a3a; /* Blue */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+
+    margin: 0 auto;
+    margin-bottom: 5px;
+    animation: spin 0.5s linear infinite;
+}
 
   @keyframes spin {
     0% { transform: rotate(0deg); }

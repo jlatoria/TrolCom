@@ -3,6 +3,9 @@
 var socket = io();
 var isErr = false;
 var p = 1;
+var IP;
+
+var relay = false;
 
 $(document).ready(function () {
     
@@ -20,6 +23,32 @@ socket.on('log-success',function (msg, ip) {
     $('#login').html('Connect');
     ChangePage();
     $('#dip').html(ip);
+    
+    if(msg == "0") {
+        relay = false;
+    } else {
+        relay = true;
+
+    }
+
+    if(relay) {
+        $('#btn-0').addClass('bactive');
+    } else {
+        $('#btn-0').removeClass('bactive');
+    }
+
+    $('#btn-0').html('<i class="icon ri-shut-down-line"></i> <p>Relay</p>');
+
+});
+
+socket.on('success',function (msg) {
+    if(msg == "0") {
+        $('#btn-0').html('<i class="icon ri-shut-down-line"></i> <p>Relay</p>');
+        $('#btn-0').removeClass('bactive');
+    } else {
+        $('#btn-0').html('<i class="icon ri-shut-down-line"></i> <p>Relay</p>');
+        $('#btn-0').addClass('bactive');
+    }
 
 });
 
@@ -32,7 +61,7 @@ function ChangePage() {
 
 $('#login').click(function () {
     $('#login').html('<div class="loader"></div>');
-    var IP = $('#ip').val();
+    IP = $('#ip').val();
     console.log(IP);
     if(IP != "") {
         socket.emit('login', IP);
@@ -55,7 +84,8 @@ $('#ip').on('input', function () {
     }
 });
 
-$('#controls').on('click', 'div.btn', function () {
-    $(this).addClass('bactive');
+$('#btn-0').on('click', function () {
+    $('#btn-0').html('<div class="loader-blk"></div><p>Loading</p>');
+    socket.emit('toggle', IP);
 });
 
